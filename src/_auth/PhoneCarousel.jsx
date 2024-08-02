@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const PhoneCarousel = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const images = [
-    '/public/assets/images/screenshot1-2x.png',
-    '/public/assets/images/screenshot2-2x.png',
-    '/public/assets/images/screenshot3-2x.png',
-    '/public/assets/images/screenshot4-2x.png'
+    '/assets/images/screenshot1-2x.png',
+    '/assets/images/screenshot2-2x.png',
+    '/assets/images/screenshot3-2x.png',
+    '/assets/images/screenshot4-2x.png'
   ];
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const PhoneCarousel = () => {
   return (
     <div className="relative">
       <img
-        src="/public/assets/images/home-phones-2x.png"
+        src="/assets/images/home-phones-2x.png"
         alt="Instagram phones"
         className="w-full h-auto"
       />

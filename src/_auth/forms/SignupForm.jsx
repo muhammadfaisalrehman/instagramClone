@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormLabel,
   FormField,
   FormItem,
   FormMessage,
@@ -43,9 +42,9 @@ const SigninForm = () => {
         </Button>
 
         <div className="flex items-center mb-4">
-          <hr  className="bg-gray-500 color h-1 border-nones"/>
-          <span className="text-gray-500">OR</span>
-          <hr />
+          <hr  className="flex-1 bg-gray-500 border-nones"/>
+          <span className="text-gray-500 text-center text-xs font-semibold flex-[0.50]">OR</span>
+          <hr  className="flex-1 bg-gray-500 border-nones"/>
         </div>
 
         <form

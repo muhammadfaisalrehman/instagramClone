@@ -1,9 +1,10 @@
-import { Outlet, Navigate } from "react-router-dom";
+import { Outlet, Navigate, useLocation } from "react-router-dom";
 import PhoneCarousel from "./PhoneCarousel";
+
 
 const AuthLayout = () => {
   const isAuthenticated = false;
-
+  const { pathname } = useLocation();
   return (
     <>
       {isAuthenticated ? (
@@ -21,7 +22,7 @@ const AuthLayout = () => {
               <div className="border border-gray-300">
               <div className="text-center">
                 <img
-                  src="/public/assets/images/Instagram-Logo-PNG7.png"
+                  src="/assets/images/Instagram-Logo-PNG7.png"
                   alt="Instagram"
                   className="mx-auto mt-8 mb-2 h-24 w-auto"
                 />
@@ -33,9 +34,10 @@ const AuthLayout = () => {
               {/* Don't have an account? Sign up link */}
               <div className="bg-white px-6 py-5 mt-3 border border-gray-300">
               <p className="text-center text-sm text-gray-600">
-                Don't have an account?{" "}
+                {/* Don&apos;t have an account?{" "} */}
+                {pathname=='/sign-in'?`Don&apos;t have an account? `: `Have an account? `}
                 <a href="/signup" className="font-semibold text-blue-500 hover:text-blue-600">
-                  Sign up
+                  {pathname=='/sign-in'?`Sign up`: `Sign in`}
                 </a>
               </p>
               </div>
@@ -43,8 +45,8 @@ const AuthLayout = () => {
               <div className="mt-8 text-center">
                 <p className="text-sm text-gray-600 mb-4">Get the app.</p>
                 <div className="flex justify-center space-x-4">
-                  <img src="/public/assets/images/c5Rp7Ym-Klz.png" alt="App Store" className="h-10" />
-                  <img src="/public/assets/images/EHY6QnZYdNX.png" alt="Google Play" className="h-10" />
+                  <img src="/assets/images/c5Rp7Ym-Klz.png" alt="App Store" className="h-10" />
+                  <img src="/assets/images/EHY6QnZYdNX.png" alt="Google Play" className="h-10" />
                 </div>
               </div>
             </div>
